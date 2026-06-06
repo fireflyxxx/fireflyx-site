@@ -59,9 +59,3 @@ export function pager(pathname: string) {
     next: ORDER[(idx + 1) % len],
   };
 }
-
-export const SOCIALS = [
-  { label: "GitHub", href: "#" },
-  { label: "X / Twitter", href: "#" },
-  { label: "Email", href: "mailto:hello@fireflyx.dev" },
-];

@@ -6,10 +6,16 @@ export const metadata: Metadata = {
 };
 
 const links = [
-  { plat: "GitHub", handle: "github.com/fireflyx" },
-  { plat: "X / Twitter", handle: "@fireflyx" },
-  { plat: "LinkedIn", handle: "in/fireflyx" },
-  { plat: "微信公众号", handle: "fireflyx" },
+  {
+    plat: "GitHub",
+    handle: "github.com/fireflyxxx",
+    href: "https://github.com/fireflyxxx",
+  },
+  {
+    plat: "X / Twitter",
+    handle: "@fireflyx26710",
+    href: "https://x.com/fireflyx26710",
+  },
 ];
 
 export default function ContactPage() {
@@ -28,7 +34,14 @@ export default function ContactPage() {
 
         <section className="wrap contact-main">
           <div className="big-mail rv">
-            <a href="mailto:hello@fireflyx.dev">hello@fireflyx.dev</a>
+            <div className="mail-line">
+              <a href="mailto:fireflyx@qq.com">fireflyx@qq.com</a>
+            </div>
+            <div className="mail-line">
+              <a href="mailto:fireflyx26710@gmail.com">
+                fireflyx26710@gmail.com
+              </a>
+            </div>
           </div>
           <div className="status rv d1">
             <span className="dot" />
@@ -37,7 +50,7 @@ export default function ContactPage() {
 
           <div className="clinks rv d2">
             {links.map((l) => (
-              <a className="clink" href="#" key={l.plat}>
+              <a className="clink" href={l.href} key={l.plat}>
                 <span className="l">
                   <span className="plat">{l.plat}</span>
                   <span className="handle">{l.handle}</span>

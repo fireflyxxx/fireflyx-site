@@ -9,9 +9,9 @@ export default function Home() {
       <main className="wrap home">
         <div className="home-top">
           <div className="statement rv">
-            构建会思考、
+            这里是fireflyx的
             <br />
-            会行动的<em>智能系统</em>。
+            个人网站，我擅长<em>ai全栈开发与agent开发</em>。
           </div>
           <div className="aside rv d1">
             <span className="label">

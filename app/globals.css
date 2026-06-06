@@ -1147,13 +1147,22 @@
     padding-top: clamp(48px, 7vw, 96px);
   }
   .contact-main .big-mail {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.22em;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: clamp(32px, 7vw, 100px);
+    font-size: clamp(24px, 4vw, 56px);
     letter-spacing: -0.035em;
-    line-height: 0.96;
+    line-height: 1;
+  }
+  .contact-main .big-mail .mail-line {
+    min-width: 0;
   }
   .contact-main .big-mail a {
+    display: block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
     text-decoration: none;
     color: var(--color-ink);
     transition: color 0.35s;

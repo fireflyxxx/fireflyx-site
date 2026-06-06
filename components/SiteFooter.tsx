@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { pager, SOCIALS } from "@/lib/nav";
+import { pager } from "@/lib/nav";
 
 export default function SiteFooter({ path }: { path?: string }) {
   const realPath = usePathname();
@@ -28,15 +28,6 @@ export default function SiteFooter({ path }: { path?: string }) {
               <span className="ar">→</span>
             </span>
           </Link>
-        </div>
-        <div className="row">
-          <div className="socials">
-            {SOCIALS.map((s) => (
-              <a key={s.label} href={s.href}>
-                {s.label}
-              </a>
-            ))}
-          </div>
         </div>
         <div className="meta">
           <span>© 2026 fireflyx</span>
