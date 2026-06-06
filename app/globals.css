@@ -700,6 +700,15 @@
     border-radius: 30px;
     padding: 5px 12px;
   }
+  .project-note {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-muted);
+    border: 1px solid var(--color-line-2);
+    border-radius: 30px;
+    padding: 6px 13px;
+  }
   .proj--feature {
     grid-column: 1 / -1;
     display: grid;
@@ -777,6 +786,62 @@
   .about-hero .body p b {
     color: var(--color-ink);
     font-weight: 600;
+  }
+  .about-hero .resume-cta {
+    margin-top: clamp(40px, 6vw, 68px);
+    padding-top: clamp(28px, 3.5vw, 40px);
+    border-top: 1px solid var(--color-line);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .about-hero .resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 26px;
+    border-radius: 999px;
+    background: var(--color-ink);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition:
+      background 0.3s,
+      transform 0.3s,
+      box-shadow 0.3s;
+  }
+  .about-hero .resume-btn .t .en {
+    color: rgb(255 255 255 / 0.55);
+    font-weight: 500;
+    margin-left: 4px;
+  }
+  .about-hero .resume-btn .arr {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-ink);
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    transition: transform 0.3s;
+  }
+  .about-hero .resume-btn:hover {
+    background: var(--color-accent-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px -10px var(--color-accent);
+  }
+  .about-hero .resume-btn:hover .arr {
+    background: #fff;
+    transform: translateY(2px);
+  }
+  .about-hero .resume-meta {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--color-faint);
   }
   @media (max-width: 760px) {
     .about-hero {

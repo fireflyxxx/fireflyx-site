@@ -11,7 +11,7 @@ export default function Home() {
           <div className="statement rv">
             这里是fireflyx的
             <br />
-            个人网站，我擅长<em>ai全栈开发与agent开发</em>。
+            个人网站，我擅长<em>AI全栈开发与Agent开发</em>。
           </div>
           <div className="aside rv d1">
             <span className="label">

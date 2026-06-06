@@ -57,7 +57,7 @@ export default function WorkPage() {
 
         <section className="wrap">
           <div className="work-grid">
-            <a className="proj proj--feature rv" href="#">
+            <article className="proj proj--feature rv">
               <div className="thumb">
                 <div className="ph">
                   精选项目封面图 · AGENT 工作流引擎
@@ -81,18 +81,15 @@ export default function WorkPage() {
                   <span>WebSocket</span>
                 </div>
                 <div style={{ marginTop: 24 }}>
-                  <span className="btn-link">
-                    查看项目 <span className="arr">↗</span>
-                  </span>
+                  <span className="project-note">项目详情整理中</span>
                 </div>
               </div>
-            </a>
+            </article>
 
             {projects.map((p) => (
-              <a
+              <article
                 key={p.title}
                 className={`proj rv${p.delay ? ` ${p.delay}` : ""}`}
-                href="#"
               >
                 <div className="thumb">
                   <div className="ph">
@@ -114,7 +111,7 @@ export default function WorkPage() {
                     <span key={t}>{t}</span>
                   ))}
                 </div>
-              </a>
+              </article>
             ))}
           </div>
         </section>

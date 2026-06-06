@@ -73,6 +73,19 @@ export default function AboutPage() {
                   相关的产品与基础设施，也对开发者体验（DX）格外上心。
                 </p>
               </div>
+              <div className="resume-cta rv d3">
+                <a
+                  className="resume-btn"
+                  href="/fireflyx-resume.docx"
+                  download="fireflyx-resume.docx"
+                >
+                  <span className="arr">↓</span>
+                  <span className="t">
+                    下载简历 <span className="en">Resume</span>
+                  </span>
+                </a>
+                <span className="resume-meta">DOCX · 简历下载</span>
+              </div>
             </div>
           </div>
         </section>
