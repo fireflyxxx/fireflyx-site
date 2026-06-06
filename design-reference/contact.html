@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh" data-screen-label="Contact / 联系">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>联系 / Contact — fireflyx</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+.contact-main{padding-top:clamp(48px,7vw,96px);}
+.contact-main .big-mail{font-family:var(--display);font-weight:600;font-size:clamp(32px,7vw,100px);letter-spacing:-0.035em;line-height:0.96;}
+.contact-main .big-mail a{text-decoration:none;color:var(--ink);transition:color .35s;}
+.contact-main .big-mail a:hover{color:var(--accent);}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-weight:500;font-size:15px;color:var(--muted);}
+.status .dot{width:9px;height:9px;border-radius:50%;background:oklch(0.7 0.17 150);box-shadow:0 0 0 4px oklch(0.7 0.17 150 / 0.18);}
+.clinks{margin-top:clamp(46px,7vw,84px);max-width:720px;border-top:1px solid var(--line-2);}
+.clink{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:clamp(18px,2.4vw,26px) 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);transition:padding-left .35s cubic-bezier(.16,1,.3,1),color .3s;}
+.clink:hover{padding-left:16px;color:var(--accent-deep);}
+.clink .l{display:flex;align-items:baseline;gap:16px;}
+.clink .plat{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.2vw,27px);letter-spacing:-0.02em;}
+.clink .handle{color:var(--muted);font-size:14px;}
+.clink:hover .handle{color:var(--accent-deep);}
+.clink .go{font-size:18px;color:var(--faint);transition:transform .35s,color .3s;}
+.clink:hover .go{color:var(--accent-deep);transform:translateX(4px);}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="site-head">
+  <div class="wrap row">
+    <a class="brand" href="index.html"><span class="x">f</span>irefl<span class="x">y</span><span class="x">x</span></a>
+    <nav class="site-nav">
+      <a href="work.html">作品</a>
+      <a href="about.html">关于</a>
+      <a href="stack.html">技术栈</a>
+      <a href="blog.html">博客</a>
+      <a href="contact.html" class="active">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap intro">
+    <span class="idx rv">05 — CONTACT</span>
+    <h1 class="rv d1">联系 <span class="en">Let's build something</span></h1>
+    <p class="desc rv d2">对合作、开源或单纯聊聊技术都欢迎。最快的方式是邮件。</p>
+  </section>
+
+  <section class="wrap contact-main">
+    <div class="big-mail rv"><a href="mailto:hello@fireflyx.dev">hello@fireflyx.dev</a></div>
+    <div class="status rv d1"><span class="dot"></span>当前开放合作与实习机会 · Open to work</div>
+
+    <div class="clinks rv d2">
+      <a class="clink" href="#"><span class="l"><span class="plat">GitHub</span><span class="handle">github.com/fireflyx</span></span><span class="go">↗</span></a>
+      <a class="clink" href="#"><span class="l"><span class="plat">X / Twitter</span><span class="handle">@fireflyx</span></span><span class="go">↗</span></a>
+      <a class="clink" href="#"><span class="l"><span class="plat">LinkedIn</span><span class="handle">in/fireflyx</span></span><span class="go">↗</span></a>
+      <a class="clink" href="#"><span class="l"><span class="plat">微信公众号</span><span class="handle">fireflyx</span></span><span class="go">↗</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="pager">
+      <a class="pg pg--prev" href="blog.html"><span class="label">上一页 / Prev</span><span class="pg-t"><span class="ar">←</span>博客 — Blog</span></a>
+      <a class="pg pg--next" href="index.html"><span class="label">下一页 / Next</span><span class="pg-t">首页 — Home<span class="ar">→</span></span></a>
+    </div>
+    <div class="row">
+      <div class="socials">
+        <a href="#">GitHub</a><a href="#">X / Twitter</a><a href="mailto:hello@fireflyx.dev">Email</a>
+      </div>
+    </div>
+    <div class="meta"><span>© 2026 fireflyx</span><span>AI 全栈 + Agent 开发</span><a href="index.html" style="text-decoration:none;">返回首页 ↑</a></div>
+  </div>
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

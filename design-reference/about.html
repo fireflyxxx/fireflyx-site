@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh" data-screen-label="About / 关于">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>关于 / About — fireflyx</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+.about-hero{display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(30px,5vw,76px);padding-top:clamp(40px,6vw,80px);align-items:start;}
+.about-hero .portrait{aspect-ratio:3/4;position:sticky;top:100px;}
+.about-hero .lead{font-family:var(--display);font-weight:600;font-size:clamp(23px,2.7vw,37px);line-height:1.18;letter-spacing:-0.02em;}
+.about-hero .lead em{font-style:normal;color:var(--accent);}
+.about-hero .body{margin-top:30px;display:flex;flex-direction:column;gap:20px;}
+.about-hero .body p{font-size:clamp(16px,1.25vw,18px);line-height:1.68;color:var(--muted);max-width:58ch;}
+.about-hero .body p b{color:var(--ink);font-weight:600;}
+@media(max-width:760px){.about-hero{grid-template-columns:1fr;}.about-hero .portrait{position:static;aspect-ratio:4/3;}}
+
+.principles{padding-top:clamp(60px,9vw,120px);}
+.principles .ptitle{font-family:var(--display);font-weight:600;font-size:clamp(22px,2.4vw,30px);letter-spacing:-0.02em;margin-bottom:14px;}
+.plist{border-top:1px solid var(--line-2);}
+.pitem{display:grid;grid-template-columns:60px 1fr 1.4fr;gap:24px;align-items:start;padding:clamp(22px,3vw,34px) 0;border-bottom:1px solid var(--line);}
+.pitem .pno{font-family:var(--display);font-weight:600;font-size:15px;color:var(--accent-deep);}
+.pitem h4{font-family:var(--display);font-weight:600;font-size:clamp(19px,2vw,25px);letter-spacing:-0.015em;}
+.pitem p{color:var(--muted);font-size:15px;line-height:1.62;}
+@media(max-width:680px){.pitem{grid-template-columns:40px 1fr;}.pitem p{grid-column:2;}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="site-head">
+  <div class="wrap row">
+    <a class="brand" href="index.html"><span class="x">f</span>irefl<span class="x">y</span><span class="x">x</span></a>
+    <nav class="site-nav">
+      <a href="work.html">作品</a>
+      <a href="about.html" class="active">关于</a>
+      <a href="stack.html">技术栈</a>
+      <a href="blog.html">博客</a>
+      <a href="contact.html">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap intro">
+    <span class="idx rv">02 — ABOUT</span>
+    <h1 class="rv d1">关于 <span class="en">About</span></h1>
+    <p class="desc rv d2">软件工程在读，专注 AI 全栈与 Agent 开发。下面是一点背景与我做事的方式。</p>
+  </section>
+
+  <section class="wrap">
+    <div class="about-hero">
+      <div class="portrait ph rv">个人照片 / 头像<br/>PORTRAIT</div>
+      <div>
+        <p class="lead rv d1">我在模型与产品之间，<em>寻找优雅的接缝</em>—— 让不确定的智能，收敛成确定、可用、可被信任的体验。</p>
+        <div class="body">
+          <p class="rv d2">我是 <b>fireflyx</b>，一名软件工程方向的学生与开发者。日常游走于<b>大模型编排</b>、<b>检索增强生成（RAG）</b>、工具调用与评测，以及把它们包裹起来、让人愿意使用的<b>前后端界面</b>之间。</p>
+          <p class="rv d2">I care about restrained design, legible code, and open collaboration. 我相信好的工程有它自己的美学：克制、清晰、恰到好处。常在开源社区出没，乐于把踩过的坑写成工具与文章。</p>
+          <p class="rv d2">目前正在构建 AI Agent 相关的产品与基础设施，也对开发者体验（DX）格外上心。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap principles">
+    <div class="ptitle rv">工作方式 <span style="color:var(--faint);">/ How I work</span></div>
+    <div class="plist rv">
+      <div class="pitem"><span class="pno">01</span><h4>先想清楚，再写代码</h4><p>把模糊的需求收敛成清晰的问题边界，是工程里最值钱的一步。</p></div>
+      <div class="pitem"><span class="pno">02</span><h4>让智能可被验证</h4><p>为 Agent 与 Prompt 建立评测与护栏，让“看起来对”变成“可以证明对”。</p></div>
+      <div class="pitem"><span class="pno">03</span><h4>克制即风格</h4><p>少即是多。一个清晰的界面，胜过十个炫技的功能。</p></div>
+      <div class="pitem"><span class="pno">04</span><h4>开放地协作</h4><p>把工具与经验沉淀为开源，在社区里被验证、被改进。</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="pager">
+      <a class="pg pg--prev" href="work.html"><span class="label">上一页 / Prev</span><span class="pg-t"><span class="ar">←</span>作品 — Work</span></a>
+      <a class="pg pg--next" href="stack.html"><span class="label">下一页 / Next</span><span class="pg-t">技术栈 — Stack<span class="ar">→</span></span></a>
+    </div>
+    <div class="row">
+      <div class="socials">
+        <a href="#">GitHub</a><a href="#">X / Twitter</a><a href="mailto:hello@fireflyx.dev">Email</a>
+      </div>
+    </div>
+    <div class="meta"><span>© 2026 fireflyx</span><span>AI 全栈 + Agent 开发</span><a href="index.html" style="text-decoration:none;">返回首页 ↑</a></div>
+  </div>
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

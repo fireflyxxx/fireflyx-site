@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh" data-screen-label="Stack / 技术栈">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>技术栈 / Stack — fireflyx</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+.stack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(34px,4vw,60px) clamp(40px,6vw,96px);padding-top:clamp(40px,6vw,80px);}
+.sgroup h3{font-family:var(--display);font-weight:600;font-size:clamp(19px,2vw,23px);letter-spacing:-0.015em;padding-bottom:14px;border-bottom:1px solid var(--line-2);display:flex;justify-content:space-between;align-items:baseline;gap:14px;}
+.sgroup h3 .lvl{font-size:12px;font-weight:600;color:var(--accent-deep);letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;}
+.sgroup ul{list-style:none;margin-top:6px;}
+.sgroup li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:clamp(16px,1.3vw,18px);font-weight:500;}
+.sgroup li .note{color:var(--faint);font-size:13px;font-weight:400;text-align:right;white-space:nowrap;flex-shrink:0;padding-left:14px;}
+.stack-note{padding-top:clamp(50px,7vw,90px);}
+.stack-note p{font-size:clamp(16px,1.4vw,20px);line-height:1.6;color:var(--muted);max-width:60ch;}
+.stack-note p b{color:var(--ink);font-weight:600;}
+@media(max-width:680px){.stack-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="site-head">
+  <div class="wrap row">
+    <a class="brand" href="index.html"><span class="x">f</span>irefl<span class="x">y</span><span class="x">x</span></a>
+    <nav class="site-nav">
+      <a href="work.html">作品</a>
+      <a href="about.html">关于</a>
+      <a href="stack.html" class="active">技术栈</a>
+      <a href="blog.html">博客</a>
+      <a href="contact.html">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap intro">
+    <span class="idx rv">03 — STACK</span>
+    <h1 class="rv d1">技术栈 <span class="en">Stack &amp; Toolkit</span></h1>
+    <p class="desc rv d2">日常使用的语言、框架与 AI 工具。星标程度仅供参考，欢迎据实调整。</p>
+  </section>
+
+  <section class="wrap">
+    <div class="stack-grid">
+
+      <div class="sgroup rv">
+        <h3>AI / Agent <span class="lvl">核心</span></h3>
+        <ul>
+          <li>LLM Orchestration <span class="note">编排 · 工具调用</span></li>
+          <li>RAG <span class="note">检索增强生成</span></li>
+          <li>Multi-Agent <span class="note">协作 · 角色分工</span></li>
+          <li>Evals &amp; Guardrails <span class="note">评测 · 护栏</span></li>
+          <li>MCP <span class="note">模型上下文协议</span></li>
+        </ul>
+      </div>
+
+      <div class="sgroup rv d1">
+        <h3>语言 / Languages <span class="lvl">每日</span></h3>
+        <ul>
+          <li>Python <span class="note">主力</span></li>
+          <li>TypeScript <span class="note">主力</span></li>
+          <li>Go <span class="note">服务 · 工具</span></li>
+          <li>SQL <span class="note">数据</span></li>
+        </ul>
+      </div>
+
+      <div class="sgroup rv">
+        <h3>前端 / Frontend <span class="lvl">熟练</span></h3>
+        <ul>
+          <li>React <span class="note">组件 · 状态</span></li>
+          <li>Next.js <span class="note">全栈渲染</span></li>
+          <li>Tailwind CSS <span class="note">样式</span></li>
+          <li>Three.js <span class="note">可视化</span></li>
+        </ul>
+      </div>
+
+      <div class="sgroup rv d1">
+        <h3>后端 / Backend <span class="lvl">熟练</span></h3>
+        <ul>
+          <li>FastAPI <span class="note">Python 服务</span></li>
+          <li>Node.js <span class="note">JS 服务</span></li>
+          <li>PostgreSQL <span class="note">关系型</span></li>
+          <li>Redis <span class="note">缓存 · 队列</span></li>
+        </ul>
+      </div>
+
+      <div class="sgroup rv">
+        <h3>AI 基础设施 / Infra <span class="lvl">实战</span></h3>
+        <ul>
+          <li>LangGraph <span class="note">Agent 编排</span></li>
+          <li>Vector DB <span class="note">向量检索</span></li>
+          <li>Embeddings <span class="note">表示</span></li>
+          <li>vLLM <span class="note">推理服务</span></li>
+        </ul>
+      </div>
+
+      <div class="sgroup rv d1">
+        <h3>工程 / DevOps <span class="lvl">够用</span></h3>
+        <ul>
+          <li>Docker <span class="note">容器化</span></li>
+          <li>CI/CD <span class="note">自动化</span></li>
+          <li>Cloud <span class="note">部署</span></li>
+          <li>Observability <span class="note">可观测</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="wrap stack-note">
+    <p class="rv">最近在深入：<b>多智能体协作</b>、<b>Agent 评测体系</b>，以及如何把这些能力<b>稳定地产品化</b>。</p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="pager">
+      <a class="pg pg--prev" href="about.html"><span class="label">上一页 / Prev</span><span class="pg-t"><span class="ar">←</span>关于 — About</span></a>
+      <a class="pg pg--next" href="blog.html"><span class="label">下一页 / Next</span><span class="pg-t">博客 — Blog<span class="ar">→</span></span></a>
+    </div>
+    <div class="row">
+      <div class="socials">
+        <a href="#">GitHub</a><a href="#">X / Twitter</a><a href="mailto:hello@fireflyx.dev">Email</a>
+      </div>
+    </div>
+    <div class="meta"><span>© 2026 fireflyx</span><span>AI 全栈 + Agent 开发</span><a href="index.html" style="text-decoration:none;">返回首页 ↑</a></div>
+  </div>
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

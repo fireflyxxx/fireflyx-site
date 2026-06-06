@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh" data-screen-label="Work / 作品">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>作品 / Work — fireflyx</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,72px) clamp(24px,4vw,56px);padding-top:clamp(40px,6vw,80px);}
+.proj{text-decoration:none;color:inherit;display:block;}
+.proj .thumb{overflow:hidden;position:relative;aspect-ratio:4/3;}
+.proj .thumb .ph{position:absolute;inset:0;transition:transform .9s cubic-bezier(.16,1,.3,1);}
+.proj:hover .thumb .ph{transform:scale(1.045);}
+.proj .head{display:flex;justify-content:space-between;align-items:baseline;margin-top:20px;gap:16px;}
+.proj h3{font-family:var(--display);font-weight:600;font-size:clamp(22px,2.4vw,31px);line-height:1.06;letter-spacing:-0.022em;transition:color .3s;}
+.proj:hover h3{color:var(--accent-deep);}
+.proj .yr{font-size:13px;color:var(--faint);font-weight:500;white-space:nowrap;}
+.proj p{margin-top:9px;color:var(--muted);font-size:15px;line-height:1.58;max-width:46ch;}
+.proj .tags{margin-top:15px;display:flex;flex-wrap:wrap;gap:8px;}
+.proj .tags span{font-size:12px;font-weight:500;color:var(--muted);border:1px solid var(--line-2);border-radius:30px;padding:5px 12px;}
+.proj--feature{grid-column:1 / -1;display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(26px,4vw,60px);align-items:center;}
+.proj--feature .thumb{aspect-ratio:16/10;}
+.proj--feature h3{font-size:clamp(28px,3.6vw,46px);}
+.proj--feature .badge{display:inline-block;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent-deep);background:var(--accent-soft);padding:6px 12px;border-radius:30px;margin-bottom:16px;}
+@media(max-width:1000px){.proj--feature{grid-template-columns:1fr;gap:22px;}}
+@media(max-width:760px){.work-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="site-head">
+  <div class="wrap row">
+    <a class="brand" href="index.html"><span class="x">f</span>irefl<span class="x">y</span><span class="x">x</span></a>
+    <nav class="site-nav">
+      <a href="work.html" class="active">作品</a>
+      <a href="about.html">关于</a>
+      <a href="stack.html">技术栈</a>
+      <a href="blog.html">博客</a>
+      <a href="contact.html">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap intro">
+    <span class="idx rv">01 — WORK</span>
+    <h1 class="rv d1">作品 <span class="en">Selected Work</span></h1>
+    <p class="desc rv d2">围绕 Agent 与全栈展开的项目、开源贡献与实验。以下为占位项目，替换为你的真实标题、截图与链接即可。</p>
+  </section>
+
+  <section class="wrap">
+    <div class="work-grid">
+
+      <a class="proj proj--feature rv" href="#">
+        <div class="thumb"><div class="ph">精选项目封面图 · AGENT 工作流引擎<br/>FEATURED — PROJECT COVER</div></div>
+        <div class="cap">
+          <span class="badge">Featured · 开源</span>
+          <div class="head"><h3>Agent 工作流引擎</h3></div>
+          <p>可视化编排多步骤智能体：节点、分支、人类介入与回放。把复杂的 Agent 逻辑变成可读、可调试的有向图，并支持实时执行与回溯。</p>
+          <div class="tags"><span>LangGraph</span><span>Python</span><span>React</span><span>WebSocket</span></div>
+          <div style="margin-top:24px;"><span class="btn-link">查看项目 <span class="arr">↗</span></span></div>
+        </div>
+      </a>
+
+      <a class="proj rv" href="#">
+        <div class="thumb"><div class="ph">项目截图 02<br/>RAG 知识助手</div></div>
+        <div class="head"><h3>RAG 知识助手</h3><span class="yr">2025</span></div>
+        <p>面向文档库的检索增强问答：混合检索、重排序与引用溯源，让回答可被核查。</p>
+        <div class="tags"><span>RAG</span><span>Vector DB</span><span>FastAPI</span></div>
+      </a>
+
+      <a class="proj rv d1" href="#">
+        <div class="thumb"><div class="ph">项目截图 03<br/>开源 MCP 工具集</div></div>
+        <div class="head"><h3>开源 MCP 工具集</h3><span class="yr">2024</span></div>
+        <p>一组 Model Context Protocol 服务端实现，让任意 LLM 安全连接真实工具与数据。</p>
+        <div class="tags"><span>MCP</span><span>TypeScript</span><span>OSS</span></div>
+      </a>
+
+      <a class="proj rv" href="#">
+        <div class="thumb"><div class="ph">项目截图 04<br/>实时多模态 Demo</div></div>
+        <div class="head"><h3>实时多模态 Demo</h3><span class="yr">2024</span></div>
+        <p>低延迟语音 + 视觉的对话原型，展示端到端的多模态 Agent 交互。</p>
+        <div class="tags"><span>WebRTC</span><span>LLM</span><span>Next.js</span></div>
+      </a>
+
+      <a class="proj rv d1" href="#">
+        <div class="thumb"><div class="ph">项目截图 05<br/>Prompt 评测平台</div></div>
+        <div class="head"><h3>Prompt 评测平台</h3><span class="yr">2023</span></div>
+        <p>对 Prompt 与模型版本做可重复的离线评测与回归，配套数据看板。</p>
+        <div class="tags"><span>Evals</span><span>Python</span><span>SQLite</span></div>
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="pager">
+      <a class="pg pg--prev" href="index.html"><span class="label">上一页 / Prev</span><span class="pg-t"><span class="ar">←</span>首页 — Home</span></a>
+      <a class="pg pg--next" href="about.html"><span class="label">下一页 / Next</span><span class="pg-t">关于 — About<span class="ar">→</span></span></a>
+    </div>
+    <div class="row">
+      <div class="socials">
+        <a href="#">GitHub</a><a href="#">X / Twitter</a><a href="mailto:hello@fireflyx.dev">Email</a>
+      </div>
+    </div>
+    <div class="meta"><span>© 2026 fireflyx</span><span>AI 全栈 + Agent 开发</span><a href="index.html" style="text-decoration:none;">返回首页 ↑</a></div>
+  </div>
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+---
+title: "MCP 入门：让模型安全地连接你的工具"
+date: 2025-12-02
+summary: 从零实现一个 Model Context Protocol 服务端，以及我踩过的几个坑。
+tags: [MCP, TypeScript, 开源]
+read: 11 min
+---
+
+Model Context Protocol（MCP）解决的是一个很实际的问题：如何让任意 LLM 客户端，以统一、安全的方式访问你的工具与数据。
+
+## 一个最小的 server
+
+MCP server 暴露三类能力：**工具（tools）**、**资源（resources）** 和 **提示（prompts）**。最常用的是工具：
+
+```typescript
+server.tool("get_weather", { city: z.string() }, async ({ city }) => {
+  const data = await fetchWeather(city);
+  return { content: [{ type: "text", text: JSON.stringify(data) }] };
+});
+```
+
+## 我踩过的坑
+
+1. **权限边界**：不要把“能做什么”交给模型判断，server 端必须自己校验。
+2. **错误返回**：把失败信息结构化返回给模型，它才有机会自我修正。
+3. **传输层**：本地用 stdio 最省事，远程再上 HTTP/SSE。
+
+把工具接入 MCP 之后，换任何支持 MCP 的客户端都能即插即用——这正是协议的价值。
