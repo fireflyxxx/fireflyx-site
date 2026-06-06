@@ -23,9 +23,9 @@ const groups = [
     lvl: "每日",
     delay: "d1",
     items: [
-      ["Python", "主力"],
+      ["Java", "主力"],
+      ["Python", "AI 相关"],
       ["TypeScript", "主力"],
-      ["Go", "服务 · 工具"],
       ["SQL", "数据"],
     ],
   },
@@ -37,7 +37,6 @@ const groups = [
       ["React", "组件 · 状态"],
       ["Next.js", "全栈渲染"],
       ["Tailwind CSS", "样式"],
-      ["Three.js", "可视化"],
     ],
   },
   {
@@ -45,10 +44,11 @@ const groups = [
     lvl: "熟练",
     delay: "d1",
     items: [
+      ["Spring Boot", "Java 后端"],
       ["FastAPI", "Python 服务"],
-      ["Node.js", "JS 服务"],
-      ["PostgreSQL", "关系型"],
-      ["Redis", "缓存 · 队列"],
+      ["MySQL", "数据库"],
+      ["PostgreSQL", "数据库"],
+      ["Redis", "缓存 · 队列 · 记忆"],
     ],
   },
   {
@@ -58,7 +58,7 @@ const groups = [
     items: [
       ["LangGraph", "Agent 编排"],
       ["Vector DB", "向量检索"],
-      ["Embeddings", "表示"],
+      ["Embeddings", "语义向量"],
       ["vLLM", "推理服务"],
     ],
   },
@@ -73,6 +73,16 @@ const groups = [
       ["Observability", "可观测"],
     ],
   },
+  {
+    h: "AI 工具 / AI Tools",
+    lvl: "日常",
+    delay: "",
+    items: [
+      ["Claude Code", "Anthropic"],
+      ["Codex", "OpenAI"],
+      ["opencode", "开源"],
+    ],
+  },
 ];
 
 export default function StackPage() {
@@ -84,9 +94,7 @@ export default function StackPage() {
           <h1 className="rv d1">
             技术栈 <span className="en">Stack &amp; Toolkit</span>
           </h1>
-          <p className="desc rv d2">
-            日常使用的语言、框架与 AI 工具。星标程度仅供参考，欢迎据实调整。
-          </p>
+          <p className="desc rv d2">日常使用的语言、框架与 AI 工具。</p>
         </section>
 
         <section className="wrap">

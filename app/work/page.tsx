@@ -7,36 +7,28 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    title: "RAG 知识助手",
+    title: "PicSeal",
+    year: "2026",
+    desc: "面向创作者的 AI 图像 / 视频混淆保护平台：在不影响人眼观感的前提下，让 AI 模型无法识别、学习与仿制内容，守护作品版权与肖像隐私。",
+    tags: ["AI 安全", "图像处理", "版权保护"],
+    href: "https://github.com/Mao-Xiaoxi/PicSeal",
+    delay: "",
+  },
+  {
+    title: "TripAgent",
     year: "2025",
-    cover: "项目截图 02\nRAG 知识助手",
-    desc: "面向文档库的检索增强问答：混合检索、重排序与引用溯源，让回答可被核查。",
-    tags: ["RAG", "Vector DB", "FastAPI"],
-    delay: "",
-  },
-  {
-    title: "开源 MCP 工具集",
-    year: "2024",
-    cover: "项目截图 03\n开源 MCP 工具集",
-    desc: "一组 Model Context Protocol 服务端实现，让任意 LLM 安全连接真实工具与数据。",
-    tags: ["MCP", "TypeScript", "OSS"],
+    desc: "对话式 AI 旅行助手：从航班、酒店到行程编排与活动发现，用 Agent 把繁琐的旅行规划变成一段轻松的对话。",
+    tags: ["AI Agent", "TypeScript", "Python"],
+    href: "https://github.com/XXLXXN/Trip_Agent",
     delay: "d1",
   },
   {
-    title: "实时多模态 Demo",
-    year: "2024",
-    cover: "项目截图 04\n实时多模态 Demo",
-    desc: "低延迟语音 + 视觉的对话原型，展示端到端的多模态 Agent 交互。",
-    tags: ["WebRTC", "LLM", "Next.js"],
+    title: "医疗影像系统",
+    year: "2026",
+    desc: "软件开发实践课程项目：面向医疗影像的管理与处理系统，团队协作开发，本人负责后端部分。",
+    tags: ["医疗影像", "后端", "团队协作"],
+    href: "https://github.com/fireflyxxx/the-medical-project",
     delay: "",
-  },
-  {
-    title: "Prompt 评测平台",
-    year: "2023",
-    cover: "项目截图 05\nPrompt 评测平台",
-    desc: "对 Prompt 与模型版本做可重复的离线评测与回归，配套数据看板。",
-    tags: ["Evals", "Python", "SQLite"],
-    delay: "d1",
   },
 ];
 
@@ -50,57 +42,20 @@ export default function WorkPage() {
             作品 <span className="en">Selected Work</span>
           </h1>
           <p className="desc rv d2">
-            围绕 Agent
-            与全栈展开的项目、开源贡献与实验。以下为占位项目，替换为你的真实标题、截图与链接即可。
+            围绕 Agent 与全栈展开的项目实践与开源协作。
           </p>
         </section>
 
         <section className="wrap">
           <div className="work-grid">
-            <article className="proj proj--feature rv">
-              <div className="thumb">
-                <div className="ph">
-                  精选项目封面图 · AGENT 工作流引擎
-                  <br />
-                  FEATURED — PROJECT COVER
-                </div>
-              </div>
-              <div className="cap">
-                <span className="badge">Featured · 开源</span>
-                <div className="head">
-                  <h3>Agent 工作流引擎</h3>
-                </div>
-                <p>
-                  可视化编排多步骤智能体：节点、分支、人类介入与回放。把复杂的
-                  Agent 逻辑变成可读、可调试的有向图，并支持实时执行与回溯。
-                </p>
-                <div className="tags">
-                  <span>LangGraph</span>
-                  <span>Python</span>
-                  <span>React</span>
-                  <span>WebSocket</span>
-                </div>
-                <div style={{ marginTop: 24 }}>
-                  <span className="project-note">项目详情整理中</span>
-                </div>
-              </div>
-            </article>
-
             {projects.map((p) => (
-              <article
+              <a
                 key={p.title}
                 className={`proj rv${p.delay ? ` ${p.delay}` : ""}`}
+                href={p.href}
+                target="_blank"
+                rel="noreferrer"
               >
-                <div className="thumb">
-                  <div className="ph">
-                    {p.cover.split("\n").map((line, i) => (
-                      <span key={line}>
-                        {i > 0 && <br />}
-                        {line}
-                      </span>
-                    ))}
-                  </div>
-                </div>
                 <div className="head">
                   <h3>{p.title}</h3>
                   <span className="yr">{p.year}</span>
@@ -111,7 +66,10 @@ export default function WorkPage() {
                     <span key={t}>{t}</span>
                   ))}
                 </div>
-              </article>
+                <span className="repo">
+                  查看仓库 <span className="arr">↗</span>
+                </span>
+              </a>
             ))}
           </div>
         </section>

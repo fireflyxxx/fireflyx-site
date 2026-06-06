@@ -45,11 +45,6 @@ export default function AboutPage() {
 
         <section className="wrap">
           <div className="about-hero">
-            <div className="portrait ph rv">
-              个人照片 / 头像
-              <br />
-              PORTRAIT
-            </div>
             <div>
               <p className="lead rv d1">
                 我在模型与产品之间，<em>寻找优雅的接缝</em>——
@@ -57,9 +52,9 @@ export default function AboutPage() {
               </p>
               <div className="body">
                 <p className="rv d2">
-                  我是 <b>fireflyx</b>
-                  ，一名软件工程方向的学生与开发者。日常游走于<b>大模型编排</b>
-                  、<b>检索增强生成（RAG）</b>
+                  我是 <b>fireflyx</b>，
+                  <b>华东师范大学软件工程专业 2023 级本科生</b>
+                  。日常游走于<b>大模型编排</b>、<b>检索增强生成（RAG）</b>
                   、工具调用与评测，以及把它们包裹起来、让人愿意使用的
                   <b>前后端界面</b>之间。
                 </p>
@@ -68,11 +63,29 @@ export default function AboutPage() {
                   collaboration.
                   我相信好的工程有它自己的美学：克制、清晰、恰到好处。常在开源社区出没，乐于把踩过的坑写成工具与文章。
                 </p>
-                <p className="rv d2">
-                  目前正在构建 AI Agent
-                  相关的产品与基础设施，也对开发者体验（DX）格外上心。
-                </p>
               </div>
+            </div>
+            <div className="about-side">
+              <aside className="now-card rv d2">
+                <div className="now-head">
+                  现在 <span className="en">/ Now</span>
+                </div>
+                <dl className="now-list">
+                  <div className="now-row">
+                    <dt>在做</dt>
+                    <dd>PicSeal、SearchAgent</dd>
+                  </div>
+                  <div className="now-row">
+                    <dt>在学</dt>
+                    <dd>多智能体协作、Agent 评测</dd>
+                  </div>
+                  <div className="now-row">
+                    <dt>在读</dt>
+                    <dd>软件工程 · 大三</dd>
+                  </div>
+                </dl>
+                <div className="now-foot">更新 · 2026-06</div>
+              </aside>
               <div className="resume-cta rv d3">
                 <a
                   className="resume-btn"
